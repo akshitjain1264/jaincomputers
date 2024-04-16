@@ -1,0 +1,1028 @@
+<?php
+    include 'index_register.php';
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jain Computers">
+
+    <!-- ========== Page Title ========== -->
+    <title>JAIN COMPUTERS</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/logo-1.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+	
+<style>
+
+	.active {
+		background-color: blue;
+		color: orange;
+		font-size: 20px;
+	}
+	
+	img {
+		border: none;
+		outline: none;
+		max-width: 200%;
+	}
+	.course-changes {
+		margin-top: 0px; 
+		padding-top: 20px;
+		margin-bottom: 0px;
+		}
+	@keyframes logo {
+		0% {color: #2D056E;}
+		50% {color: #ffffff;}
+		100% {color: #2D056E;}
+	}
+	.header-logo {
+		animation-name: logo;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		text-align: right;
+		padding: 0px;
+		margin: 0px;
+	}
+	.head-contact {
+		font-size: 20px;
+		}
+	.name {
+			font-size: 25px;
+			color: white;
+			margin-bottom: 10px;
+		}
+
+    .bg {
+        background-color: white;
+    }
+
+    .progress-bar-animated
+    {
+        -webkit-animation:progress-bar-stripes 1s linear infinite;
+        animation:progress-bar-stripes 1s linear infinite}
+        @media (prefers-reduced-motion:reduce)
+        {.progress-bar-animated{-webkit-animation:none;animation:none}
+    }
+		
+</style>
+	<!----------------Start Javascript---------------------->
+
+	<script>
+
+		function registration() {
+		
+			var name = document.myForm.fname.value.trim();
+			if (name=="") {
+				alert("Enter your name.");
+				return false;
+			}
+			
+			var eMail = document.myForm.email.value;
+			if (eMail=="") {
+				alert("Enter your e-mail.");
+				return false;
+			}
+			
+			var atpos = eMail.indexOf("@");
+			var dotpos = eMail.lastIndexOf(".");
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>eMail.length) {
+				alert("Please enter a valid e-mail address.");
+				return false;
+			}
+			
+			var ph = document.myForm.ph.value.trim();
+			var numb = ph.length;
+			if(ph=="") {
+				alert("Enter your Phone No.");
+				return false;
+			}
+			
+			if(numb>10 || numb<10) {
+				alert("Please enter correct Phone No.\nPhone no. should be of 10 digits.\n You have entered "+numb+" digit number.");
+				return false;
+			}
+			return true;
+		}
+	</script>
+    <script type="module">
+        export{name, eMail};
+    </script>
+    <!-----------------End Javascript----------------------->
+
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Start Header Top 
+    ============================================= -->
+    <div class="top-bar-area bg-dark text-light" style="margin-bottom: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 logo-box">
+                    <div class="logo" style="padding: 0px; margin: 0px;">
+						<a>
+							<img src="assets/img/logo-light.gif" alt="Thumb">
+						</a>
+					</div>
+                </div>
+                <div class="col-md-8 address-info text-right">
+                    <div class="info">
+                        <ul>
+                            <li class="head-contact">
+								<a href="https://api.whatsapp.com/send?phone=919891313737&forceIntent=true&load=loadInIOSExternalSafari">
+									<img src="assets/img/whatsapp.png" alt="whatsapp">
+									<i class=""></i> Whatsapp No. : <strong>+91 - 9891313737</strong>
+								</a>
+								<br><br>
+								<a href="tel:+91-8076110200">
+									<img src="assets/img/call1.png" alt="call">
+									<i class=""></i> For Enquiry : <strong>+91 - 8076110200</strong>
+								</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top -->
+
+    <!-- Header 
+    ============================================= -->
+    <header id="home">
+
+        <!-- Start Navigation -->
+
+        <nav class="navbar navbar-default logo-less small-pad navbar-sticky bootsnav" style="height: 0px;">
+
+            <!-- Start Top Search -->
+            <div class="container" style="margin-top: -15px;">
+                <div class="row">
+                    <div class="top-search">
+                        <div class="input-group">
+                            <form action="#">
+                                <input type="text" name="text" class="form-control" placeholder="Search">
+                                <button type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>  
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
+            <div class="container">
+
+                <!-- Start Atribute Navigation --
+                <div class="attr-nav inc-btn">
+                    <ul>
+                        <li>
+                            <a href="register.html">Register</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>        
+                <!- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo2.png" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-left" data-in="#" data-out="#">
+                        <li class="dropdown">
+							<a class="active"><strong>Home</strong></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Course</a>
+                            <ul class="dropdown-menu">
+                                
+								<li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Basic Courses</a>
+                                    <ul class="dropdown-menu">
+									 <li><a href="basic.html">Basic Computer Course (BCC)</a></li> 
+                                        <li><a href="tally.html">Accounting Package Tally</a></li> 
+                                <li><a href="busy.html">Accounting Package Busy</a></li>
+								<li><a href="DTP.html">DTP(Desktop Publishing)</a></li>
+                                    </ul>
+                                </li>
+								<li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Advance Courses</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="advance-basic.html">Advance Basic Computer Course(ABCC)</a></li>
+                                <li><a href="advance-tally.html">Advance Tally Course(ATC)</a></li>
+                                    </ul>
+                                </li>
+								
+								
+                               
+                            </ul>
+                        </li>
+						 <li class="dropdown">
+                            <a href="coming.html" >About Us</a>
+                        </li>
+                        <!--<li class="dropdown">
+							<a href="gallery.html">Gallery</a>
+						</li>-->
+						<li class="dropdown">
+							<a href="contact.html">Contact</a>
+                        </li>
+                        <li class="dropdown">
+							<a href="register.php">Register</a>
+                        </li>
+                        <li class="dropdown">
+							<a href="login.php">Login</a>
+                        </li>
+                    </ul>
+                </div>
+				<!-- /.navbar-collapse -->
+            </div>
+
+        </nav>
+        <!-- End Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Banner 
+    ============================================= -->
+    <div class="banner-area shadow bg-fixed dark text-center text-light" style="background-image: url(assets/img/banner/9.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="box-table">
+                        <div class="box-cell">
+                            <div class="content search-content">
+                                <h2>Growth Your Career With Computer Courses</h2>
+                                <ul>
+                                    <li><i class="fas fa-drafting-compass"></i> Designing</li>
+                                    <li><i class="fas fa-book"></i> Education</li>
+                                    <li><i class="fas fa-globe-asia"></i> Technology</li>
+                                </ul>
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="row">
+                                        <!--<form action="#">
+                                            <input type="text" placeholder="Enter course name" class="form-control" name="text">
+                                            <button type="submit">
+                                                <i class="ti-search"></i> Search 
+                                            </button>  
+                                        </form>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner -->
+	
+	<!-- Start Weekly Top
+    ============================================= -->
+    <div class="weekly-top-items carousel-shadow default-padding" style="padding-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-courses">
+                        <div class="heading">
+                            <h4>Popular Courses</h4>
+                        </div>
+                        <div class="top-course-items top-courses-carousel owl-carousel owl-theme">
+                            <!-- Single Item -->
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="assets/img/office/computer.jpg" alt="Thumb">
+                                    <div class="overlay">
+                                        <!--<a href="#">
+                                            <img src="assets/img/courses/1.jpg" alt="Thumb">
+                                        </a>
+                                        <ul>
+                                            <li><i class="fas fa-clock"></i> 48 hrs</li>
+                                            <li><i class="fas fa-list-ul"></i> 18</li>
+                                        </ul>-->
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="meta">
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <span>(5k)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h2>
+                                        <a href="basic.html">Basic Computer Course</a>
+                                    </h2>
+                                    <div class="footer-meta">
+                                        <a class="btn btn-theme effect btn-sm" href="basic.html">Enroll Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Item -->
+                            <!-- Single Item -->
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="assets/img/courses/tally.jpg" alt="Thumb">
+                                    <div class="overlay">
+                                        <!--<a href="#">
+                                            <img src="assets/img/tally.jpg" alt="Thumb">
+                                        </a>
+                                        <ul>
+                                            <li><i class="fas fa-clock"></i> 48 hrs</li>
+                                            <li><i class="fas fa-list-ul"></i> 65</li>
+                                        </ul>-->
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="meta">
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(4k)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h2>
+                                        <a href="tally.html">Accounting Package Tally</a>
+                                    </h2>
+                                    <div class="footer-meta">
+                                        <a class="btn btn-theme effect btn-sm" href="tally.html">Enroll Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Item -->
+                            <!-- Single Item -->
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="assets/img/DTP1.jpg" alt="Thumb">
+                                    <div class="overlay">
+                                        <!--<a href="#">
+                                            <img src="assets/img/DTP1.jpg" alt="Thumb">
+                                        </a>
+                                        <ul>
+                                            <li><i class="fas fa-clock"></i> 48 hrs</li>
+                                            <li><i class="fas fa-list-ul"></i> 32</li>
+                                        </ul>-->
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="meta">
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(2k)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h2>
+                                        <a href="DTP.html">Desktop Publishing (DTP)</a>
+                                    </h2>
+                                    <div class="footer-meta">
+                                        <a class="btn btn-theme effect btn-sm" href="DTP.html">Enroll Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Item -->
+							<!-- Single Item -->
+							<div class="item">
+                                <div class="thumb">
+                                    <img src="assets/img/busy1.jpg" alt="Thumb">
+                                    <div class="overlay">
+                                        <!--<a href="#">
+                                            <img src="assets/img/busy1.jpg" alt="Thumb">
+                                        </a>
+                                        <ul>
+                                            <li><i class="fas fa-clock"></i> 48 hrs</li>
+                                            <li><i class="fas fa-list-ul"></i> 32</li>
+                                        </ul>-->
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="meta">
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <span>(2k)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h2>
+                                        <a href="busy.html">Business Accounting Busy</a>
+                                    </h2>
+                                    <div class="footer-meta">
+                                        <a class="btn btn-theme effect btn-sm" href="busy.html">Enroll Now</a>
+                                    </div>
+                                </div>
+                            </div>
+							<!-- End Item -->
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+            
+    <!-- End Weekly Top -->
+ 
+    <!-- Start Registration 
+    ============================================= -->
+    <div class="registration-area default-padding bg-dark text-light">
+        <!-- Fixed BG-->
+        <div class="fixed-bg bg-cover" style="background-image: url(assets/img/banner/3.jpg);"></div>
+        <!-- End Fixed BG-->
+        <div class="container">
+            <div class="row">
+                
+				<div class="countdown" style="margin-left: 20px;">
+                    <h2>Register today</h2>
+                    <h4>Get Free Online Course!</h4>
+                </div>
+                <div class="col-md-5 reg-form">
+                    <form action="#" name="myForm" method="post">
+                        <h5>Free</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="First Name*" name="fname" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Last Name" name="lname" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Email*" name="email" type="email">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <select name="Choose">
+                                        <option value="1">Choose Subject</option>
+                                        <option value="2">Basic Computer Course</option>
+                                        <option value="3">Accounting Software Tally</option>
+                                        <option value="4">Business Accounting Software Busy</option>
+                                        <option value="5">DTP (Desktop Publishing)</option>
+										<option value="6">English Speaking</option>
+										<option value="7">Typing</option>
+										<option value="8">Advance Basic</option>
+										<option value="9">Advane Tally</option>
+										<option value="10">Course on Computer Concepts</option>
+										<option value="11">Computer Languages</option>
+										<option value="12">Complete Accounting SOL.</option>
+										<option value="13">Diploma in Computer Applications</option>
+										<option value="14">Office Automation</option>
+										<option value="15">Computer Hardware</option>
+										<option value="16">Web Designing</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Phone*" name="ph" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" onclick="return registration();">
+                                    Register Now    
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Registrationg -->
+	
+    <!-- Start Fun Factor 
+    ============================================= -->
+    <div class="fun-factor-area default-padding text-center bg-fixed shadow dark-hard" style="background-image: url(assets/img/banner/4.jpg); margin-top: 150px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 item">
+                    <div class="fun-fact">
+                        <div class="icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="info">
+                            <span class="timer" data-to="20" data-speed="5000"></span>
+                            <span class="medium"> Awards</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 item">
+                    <div class="fun-fact">
+                        <div class="icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="info">
+                            <span class="timer" data-to="25" data-speed="5000"></span>
+                            <span class="medium">Best Teachers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 item">
+                    <div class="fun-fact">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="info">
+                            <span class="timer" data-to="10000" data-speed="5000"></span>
+                            <span class="medium">Students Enrolled</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 item">
+                    <div class="fun-fact">
+                        <div class="icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="info">
+                            <span class="timer" data-to="15" data-speed="5000"></span>
+                            <span class="medium">Courses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Fun Factor -->
+
+
+    <!-- Start Pricing Table
+    ============================================= --
+    <div class="category-area default-padding" style="padding-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Our Pricing</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="demo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="pricingTable">
+                                <div class="pricingTable-header">
+                                    <i class="fa fa-adjust"></i>
+                                    <div class="price-value"> Rs00.00 <span class="month">per month</span> </div>
+                                </div>
+                                <h3 class="heading">Standard</h3>
+                                <div class="pricing-content">
+                                    <ul>
+                                        <li><b>50GB</b> Disk Space</li>
+                                        <li><b>50</b> Email Accounts</li>
+                                        <li><b>50GB</b> Monthly Bandwidth</li>
+                                        <li><b>10</b> subdomains</li>
+                                        <li><b>15</b> Domains</li>
+                                    </ul>
+                                </div>
+                                <div class="pricingTable-signup">
+                                    <a href="#">sign up</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-3 col-sm-6">
+                            <div class="pricingTable green">
+                                <div class="pricingTable-header">
+                                    <i class="fa fa-briefcase"></i>
+                                    <div class="price-value"> Rs200.00 <span class="month">per month</span> </div>
+                                </div>
+                                <h3 class="heading">Business</h3>
+                                <div class="pricing-content">
+                                    <ul>
+                                        <li><b>60GB</b> Disk Space</li>
+                                        <li><b>60</b> Email Accounts</li>
+                                        <li><b>60GB</b> Monthly Bandwidth</li>
+                                        <li><b>15</b> subdomains</li>
+                                        <li><b>20</b> Domains</li>
+                                    </ul>
+                                </div>
+                                <div class="pricingTable-signup">
+                                    <a href="#">sign up</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="pricingTable blue">
+                                <div class="pricingTable-header">
+                                    <i class="fa fa-award"></i>
+                                    <div class="price-value"> Rs300.00 <span class="month">per month</span> </div>
+                                </div>
+                                <h3 class="heading">Premium</h3>
+                                <div class="pricing-content">
+                                    <ul>
+                                        <li><b>70GB</b> Disk Space</li>
+                                        <li><b>70</b> Email Accounts</li>
+                                        <li><b>70GB</b> Monthly Bandwidth</li>
+                                        <li><b>20</b> subdomains</li>
+                                        <li><b>25</b> Domains</li>
+                                    </ul>
+                                </div>
+                                <div class="pricingTable-signup">
+                                    <a href="#">sign up</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="pricingTable red">
+                                <div class="pricingTable-header">
+                                    <i class="fa fa-cube"></i>
+                                    <div class="price-value"> Rs 400.00 <span class="month">per month</span> </div>
+                                </div>
+                                <h3 class="heading">Extra</h3>
+                                <div class="pricing-content">
+                                    <ul>
+                                        <li><b>80GB</b> Disk Space</li>
+                                        <li><b>80</b> Email Accounts</li>
+                                        <li><b>80GB</b> Monthly Bandwidth</li>
+                                        <li><b>25</b> subdomains</li>
+                                        <li><b>30</b> Domains</li>
+                                    </ul>
+                                </div>
+                                <div class="pricingTable-signup">
+                                    <a href="#">sign up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Pricing Table -->
+
+	<!-- Start Categories 
+    ============================================= -->
+    <div class="category-area default-padding" style="padding-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Other Services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="category-items">
+                <div class="row">
+                    <!-- Single Item -->
+                    <div class="col-md-6 col-sm-6 equal-height">
+                        <div class="item mariner">
+                            <a href="#">
+                                <div class="item-box">
+                                    <div class="icon">
+                                        <i class="flaticon-algorithm"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4>Web Developing</h4>
+                                        <p>
+                                            Current enrolled <strong>1278</strong>
+                                        </p>
+                                        <!--<span>28 Courses</span>-->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-6 col-sm-6 equal-height">
+                        <div class="item java">
+                            <a href="#">
+                                <div class="item-box">
+                                    <div class="icon">
+                                        <i class="flaticon-nanotech"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4>Software Developing</h4>
+                                        <p>
+                                            Current enrolled <strong>9577</strong>
+                                        </p>
+                                        <!--<span>56 Courses</span>-->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-6 col-sm-6 equal-height">
+                        <div class="item malachite">
+                            <a href="#">
+                                <div class="item-box">
+                                    <div class="icon">
+                                        <i class="flaticon-data-mining"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4>Computer Hardware Solution</h4>
+                                        <p>
+                                            Current enrolled <strong>2544</strong>
+                                        </p>
+                                        <!--<span>29 Courses</span>-->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-6 col-sm-6 equal-height">
+                        <div class="item brilliantrose">
+                            <a href="#">
+                                <div class="item-box">
+                                    <div class="icon">
+                                        <i class="flaticon-chip"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4>Job Placement</h4>
+                                        <p>
+                                            Current enrolled <strong>6788</strong>
+                                        </p>
+                                        <!--<span>87 Courses</span>-->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Categories -->
+
+    <!-- Start Event 
+    ============================================= -->
+    <div class="event-area default-padding" style="padding-top: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="site-heading text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Upcoming Events</h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="event-items">
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="col-md-5 thumb" style="background-image: url(assets/img/event/15-August.jpg);"></div>
+                            <div class="col-md-7 info">
+                                <div class="info-box">
+                                    <div class="date">
+                                        <strong>15</strong> Aug, 2022
+                                    </div>
+                                    <div class="content">
+                                        <h2>
+                                            <a href="#">Independence Day</a>
+                                        </h2>
+                                        <!--<ul>
+                                            <li><i class="fas fa-clock"></i> 8:00 - 16:00</li>
+                                            <li><i class="fas fa-map-marked-alt"></i> California, TX 70240</li>
+                                        </ul>-->
+                                        <p>
+                                            Independence Day is celebrated annually on 15 August as a national holiday in India commemorating the nation's independence from the United Kingdom on 15 August 1947, the day when the provisions of the 1947 Indian Independence Act, which transferred legislative sovereignty to the Indian Constituent Assembly, came into effect.
+                                        </p>
+                                        <div class="bottom">
+                                            <!--<a href="#" class="btn circle btn-dark border btn-sm">
+                                                <i class="fas fa-chart-bar"></i> Book Now
+                                            </a>
+                                            <a href="#">
+                                                <i class="fas fa-ticket-alt"></i> 126 Available
+                                            </a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        
+                    </div>
+                </div>
+                <!--<div class="more-btn col-md-12 text-center">
+                    <a href="#" class="btn btn-theme effect btn-md">View All Events</a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <!-- End Event -->
+
+    <!-- Start Newsletter 
+    ============================================= -->
+    <div class="newsletter-area fixed bg-dark">
+        <div class="container">
+            <div class="subscribe-items shadow theme-hard default-padding bg-cover" style="background-image: url(assets/img/banner/11.jpg);">
+                <div class="row">
+                    <div class="col-md-7 left-info">
+                        <div class="info-box">
+                            <div class="icon">
+                                <i class="flaticon-email"></i>
+                            </div>
+                            <div class="info">
+                                <h3>Subscribe to our newsletter</h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="email" placeholder="Enter your e-mail here" class="form-control" name="email">
+                                <button type="submit">
+                                    Subscribe <i class="fa fa-paper-plane"></i>
+                                </button>  
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Newsletter -->
+
+    <!-- Start Footer 
+    ============================================= -->
+    <footer class="bg-dark text-light top-padding">
+        <div class="container">
+            <div class="f-items default-padding">
+                <div class="row">
+                    <!-- Single item -->
+                    <div class="col-md-4 col-sm-6 item equal-height">
+                        <div class="f-item about">
+                            <h3><u>About Us</u></h3>
+                            <p>
+                               <strong>Jain Computers</strong> is providing valuable Computer and Educational courses from 20 glorious years. We aim to give students a Successful path. 
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>Email <span><a href="mailto:tojain007@gmail.com">tojain007@gmail.com</a></span></p>
+                                </li>
+                                <li>
+                                    <p>Office <span>E-115, Yadav Nagar, Samaipur, Delhi-110042</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single item -->
+
+                    <!-- Single item -->
+                    <div class="col-md-4 col-sm-6 item equal-height">
+                        <div class="f-item link">
+                            <h3><u>Basic Courses</u></h3>
+                            <ul>
+                                <li>
+                                    <a href="basic.html"><i class="ti-angle-right"></i> Basic Computer Course(BCC)</a>
+                                </li>
+                                <li>
+                                    <a href="tally.html"><i class="ti-angle-right"></i> Accounting Package Tally</a>
+                                </li>
+                                <li>
+                                    <a href="busy.html"><i class="ti-angle-right"></i> Accounting Package Busy</a>
+                                </li>
+                                <li>
+                                    <a href="DTP.html"><i class="ti-angle-right"></i> DTP (Desktop Publishing)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single item -->
+
+                    <!-- Single item -->
+                    <div class="col-md-4 col-sm-6 item equal-height">
+                        <div class="f-item link">
+                            <h3><u>Advance Courses</u></h3>
+                            <ul>
+                                <li>
+                                    <a href="advance-basic.html"><i class="ti-angle-right"></i> Advacne Basic Computer Course (ABCC)</a>
+                                </li>
+                                <li>
+                                    <a href="advance-tally.html"><i class="ti-angle-right"></i> Advance Tally Course (ATC)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single item -->
+
+                </div>
+            </div>
+        </div>
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>© Copyright 2020. All Rights Reserved by <a href="#">Jain Info Solution</a></p>
+                    </div>
+                    <div class="col-md-6 text-right link">
+                        <ul>
+                            <li>
+                                <a href="#">Terms of user</a>
+                            </li>
+                            <li>
+                                <a href="#">License</a>
+                            </li>
+                            <li>
+                                <a href="#">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Bottom -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equal-height.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/loopcounter.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
